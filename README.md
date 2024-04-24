@@ -1,6 +1,6 @@
 ### Repository content description
 
-This repository contains the code described in the **Spotting Culex pipiens from Satellite: modeling environmental suitability in central Italy with Sentinel-2 and Deep Learning methods** scientific paper for EO data download and preprocessing. At the path *src/EO*, you will find the scripts used for downloading and preprocessing satellite data.
+This repository contains the code described in the **Spotting Culex pipiens from Satellite: modeling environmental suitability in central Italy with Sentinel-2 and Deep Learning methods** scientific paper for EO data download and preprocessing.
 
  * MODIS sample data is provided
 
