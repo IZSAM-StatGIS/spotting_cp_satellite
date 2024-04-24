@@ -21,7 +21,7 @@ At the path *src/EO*, you will find the scripts used for downloading and preproc
  ### Run the EO pipeline
  Follow this steps to run the EO data download and preprocessing pipeline:
   * cd to *src/EO/script* path
-  * run 01b_DOWNLOAD_S2.py to download a sample Sentinel-2 archive (you need to create a CDSE account first!)
+  * run 01b_DOWNLOAD_S2_CDSE.py to download a sample Sentinel-2 archive (you need to create a CDSE account first!)
   * run 02_EXTRACT_S2_20M.py to extract the archive to SAFE folder
   * run 03_CROP_NORM_S2_GDAL.py to create Sentinel-2 crops
   * run 04_CROP_RESIZE_MODIS.py to create MODIS LSTD/LSTN crops
