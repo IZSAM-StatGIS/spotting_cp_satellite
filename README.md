@@ -1,5 +1,13 @@
-This repository contains the code described in the **Spotting Culex pipiens from Satellite: modeling environmental suitability in central Italy with Sentinel-2 and Deep Learning methods** scientific paper for EO data download and preprocessing.
+### Repository content description
 
+This repository contains the code described in the **Spotting Culex pipiens from Satellite: modeling environmental suitability in central Italy with Sentinel-2 and Deep Learning methods** scientific paper for EO data download and preprocessing. At the path *src/EO*, you will find the scripts used for downloading and preprocessing satellite data.
+
+ * MODIS sample data is provided
+
+ * Sentinel-2 sample data is NOT provided due to its size (about 600/1200 MB). You can download a sample Sentinel-2 archive for testing, running the 01b_DOWNLOAD_S2_CDSE.py script. It requires your Copernicus Data Space Ecosystem credentials (register [here](https://tinyurl.com/yw69kbuj))
+
+ * The python script used to download the Sentinel-2 data described in the paper relies on the [SentinelSat](https://sentinelsat.readthedocs.io/en/stable/index.html) package, which is **no longer functional**, since the Copernicus SciHub was permanently closed. Read the project development team's announcement [here](https://github.com/sentinelsat/sentinelsat/blob/main/README.rst). Nonetheless, we have included the sentinelsat based script (01a_DOWNLOAD_S2.py) in the repository for completeness and informational purposes, but we did not include the sentinelsat package in the *requirements.txt* file because it would be pointless.
+   
 ### Prepare the environment
 
 ##### VS Code DevContainer
@@ -11,15 +19,6 @@ After starting Docker on your machine, clone this repository on your computer an
 
 ##### Other methods
 If you prefer not to use the devcontainer, you can install the python environment as you like (Anaconda, Pyenv, Poetry, etc.). Always refer to the *requirements.txt* file for the list of required packages.
-
-### Repository content description
-At the path *src/EO*, you will find the scripts used for downloading and preprocessing satellite data.
-
- * MODIS sample data is provided
-
- * Sentinel-2 sample data is NOT provided due to its size (about 600/1200 MB). You can download a sample Sentinel-2 archive for testing, running the 01b_DOWNLOAD_S2_CDSE.py script. It requires your Copernicus Data Space Ecosystem credentials (register [here](https://tinyurl.com/yw69kbuj))
-
- * The python script used to download the Sentinel-2 data described in the paper relies on the [SentinelSat](https://sentinelsat.readthedocs.io/en/stable/index.html) package, which is **no longer functional**, since the Copernicus SciHub was permanently closed. Read the project development team's announcement [here](https://github.com/sentinelsat/sentinelsat/blob/main/README.rst). Nonetheless, we have included the sentinelsat based script (01a_DOWNLOAD_S2.py) in the repository for completeness and informational purposes, but we did not include the sentinelsat package in the *requirements.txt* file because it would be pointless.
 
  ### Run the EO pipeline
  Follow this steps to run the EO data download and preprocessing pipeline:
