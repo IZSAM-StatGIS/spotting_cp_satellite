@@ -1,6 +1,7 @@
-This repository contains the code described in the **Spotting Culex pipiens from Satellite: modeling environmental suitability in central Italy with Sentinel-2 and Deep Learning methods** scientific paper.
+This repository contains the code described in the **Spotting Culex pipiens from Satellite: modeling environmental suitability in central Italy with Sentinel-2 and Deep Learning methods** scientific paper for EO data download and preprocessing.
 
 ### Prepare the environment
+
 ##### VS Code DevContainer
 The most convenient way to run the scripts is to use the provided container, which automatically sets up the python environment required for the code to function properly. To launch the devcontainer, you will need:
  * Docker Desktop (or Rancher)
@@ -11,7 +12,7 @@ After starting Docker on your machine, clone this repository on your computer an
 ##### Other methods
 If you prefer not to use the devcontainer, you can install the python environment as you like (Anaconda, Pyenv, Poetry, etc.). Always refer to the *requirements.txt* file for the list of required packages.
 
-### Sentinel 2 Preprocessing code used to generate ML input data
+### Repository content description
 At the path *src/EO*, you will find the scripts used for downloading and preprocessing satellite data.
 
  * MODIS sample data is provided
