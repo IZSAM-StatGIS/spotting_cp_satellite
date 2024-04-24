@@ -2,7 +2,9 @@ This repository contains the code described in the **Spotting Culex pipiens from
 
 ### Prepare the environment
 ##### VS Code DevContainer
-The most convenient way to run the scripts is to use the provided container, which automatically sets up the python environment required for the code to function properly. To launch the devcontainer, you will need Docker Desktop (or Rancher) and Visual Studio Code with the Dev Containers extension installed.
+The most convenient way to run the scripts is to use the provided container, which automatically sets up the python environment required for the code to function properly. To launch the devcontainer, you will need:
+ * Docker Desktop (or Rancher)
+ * Visual Studio Code with the *Dev Containers* extension installed.
 
 After starting Docker on your machine, clone this repository on your computer and launch Visual Studio Code within the obtained folder. The editor will recognize the *.devcontainer/devcontainer.json* configuration file and initiate the development environment, installing by itself the packages listed in *requirements.txt* file.
 
