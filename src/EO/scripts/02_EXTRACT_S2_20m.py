@@ -84,4 +84,4 @@ for zipped_file in zipped_files:
 					prefix_name = os.path.join(root, prefix+"_"+name)
 					os.rename(original_name, prefix_name)
 		# *****************************************************************
-		print("Fine: "+datetime.now().strftime("%Y-%m-%d %H:%M:%S")) 
+		print("End: "+datetime.now().strftime("%Y-%m-%d %H:%M:%S")) 
