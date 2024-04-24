@@ -3,3 +3,4 @@ src/EO/scripts/__pycache__
 src/EO/S2_DOWNLOAD/*
 src/EO/S2_20M_EXTRACTED/*
 src/EO/S2_2OM_CROPPED/*
+src/EO/MODIS_20M_CROPPED/*
