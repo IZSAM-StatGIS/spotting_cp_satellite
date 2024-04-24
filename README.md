@@ -4,7 +4,7 @@ This repository contains the code described in the **Spotting Culex pipiens from
 
  * MODIS sample data is provided
 
- * Sentinel-2 sample data is NOT provided due to its size (about 600/1200 MB). You can download a sample Sentinel-2 archive for testing, running the 01b_DOWNLOAD_S2_CDSE.py script. It requires your Copernicus Data Space Ecosystem credentials (register [here](https://tinyurl.com/yw69kbuj))
+ * Sentinel-2 sample data is NOT provided due to its size (about 600/1200 MB). You can download a sample Sentinel-2 archive for testing, running the 01b_DOWNLOAD_S2_CDSE.py script. A Copernicus Data Space Ecosystem account (register [here](https://tinyurl.com/yw69kbuj)) is **required**.
 
  * The python script used to download the Sentinel-2 data described in the paper relies on the [SentinelSat](https://sentinelsat.readthedocs.io/en/stable/index.html) package, which is **no longer functional**, since the Copernicus SciHub was permanently closed. Read the project development team's announcement [here](https://github.com/sentinelsat/sentinelsat/blob/main/README.rst). Nonetheless, we have included the sentinelsat based script (01a_DOWNLOAD_S2.py) in the repository for completeness and informational purposes, but we did not include the sentinelsat package in the *requirements.txt* file because it would be pointless.
    
@@ -22,11 +22,23 @@ If you prefer not to use the devcontainer, you can install the python environmen
 
  ### Run the EO pipeline
  Follow this steps to run the EO data download and preprocessing pipeline:
-  * cd to *src/EO/script* path
-  * run *01b_DOWNLOAD_S2_CDSE.py* to download a sample Sentinel-2 archive (you need to create a CDSE account first!)
-  * run *02_EXTRACT_S2_20M.py* to extract the archive to SAFE folder
-  * run *03_CROP_NORM_S2_GDAL.py* to create Sentinel-2 crops
-  * run *04_CROP_RESIZE_MODIS.py* to create MODIS LSTD/LSTN crops
+```
+# move to the scripts folder
+cd src/EO/script
+
+# download the sample Sentinel-2 archive (you need to create a CDSE account first! The download script will ask you for your credentials)
+/bin/python3 01b_DOWNLOAD_S2_CDSE.py
+
+# extract the archive to SAFE folder
+/bin/python3 02_EXTRACT_S2_20M.py
+
+# create Sentinel-2 crops
+/bin/python3 03_CROP_NORM_S2_GDAL.py
+
+# create MODIS LSTD/LSTN crops
+/bin/python3 04_CROP_RESIZE_MODIS.py
+
+```
 
 All the needed folders not already included in this repo will be automatically created during the process.
 
