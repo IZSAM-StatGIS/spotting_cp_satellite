@@ -6,19 +6,19 @@ This repository contains the code described in the **Spotting Culex pipiens from
 
  * Sentinel-2 sample data is NOT provided due to its size (about 600/1200 MB). You can download a sample Sentinel-2 archive for testing, running the 01b_DOWNLOAD_S2_CDSE.py script. A Copernicus Data Space Ecosystem account is **required** (register [here](https://tinyurl.com/yw69kbuj)).
 
- * The python script used to download the Sentinel-2 data described in the paper relies on the [SentinelSat](https://sentinelsat.readthedocs.io/en/stable/index.html) package, which is **no longer functional**, since the Copernicus SciHub was permanently closed. Read the project development team's announcement [here](https://github.com/sentinelsat/sentinelsat/blob/main/README.rst). Nonetheless, we have included the sentinelsat based script (01a_DOWNLOAD_S2.py) in the repository for completeness and informational purposes, but we did not include the sentinelsat package in the *requirements.txt* file because it would be pointless.
+ * The python script used to download the Sentinel-2 data described in the paper relies on the [SentinelSat](https://sentinelsat.readthedocs.io/en/stable/index.html) package, which is **no longer functional** since the Copernicus SciHub was permanently closed. Read the project development team's announcement [here](https://github.com/sentinelsat/sentinelsat/blob/main/README.rst). Nonetheless, we have included the sentinelsat based search&download script in the repository for completeness and informational purposes (01a_DOWNLOAD_S2.py), but we did not include the package in the *requirements.txt* file because it would be pointless.
    
 ### Prepare the environment
 
 ##### VS Code DevContainer
-The most convenient way to run the scripts is to use the provided container, which automatically sets up the python environment required for the code to function properly. To launch the devcontainer, you will need:
+The most convenient way to run the scripts is to use the provided [devcontainer](https://code.visualstudio.com/docs/devcontainers/containers), which automatically sets up the python environment required for the code to function properly. You will need:
  * Docker Desktop (or Rancher)
  * Visual Studio Code with the *Dev Containers* extension installed.
 
-After starting Docker on your machine, clone this repository on your computer and launch Visual Studio Code within the obtained folder. The editor will recognize the *.devcontainer/devcontainer.json* configuration file and initiate the development environment, installing by itself the packages listed in *requirements.txt* file.
+After starting Docker on your machine, clone this repository on your computer and open the obtained folder within Visual Studio Code. The editor will recognize the *.devcontainer/devcontainer.json* configuration file and initiate the environment, installing by itself the packages listed in *requirements.txt* file.
 
 ##### Other methods
-If you prefer not to use the devcontainer, you can install the python environment as you like (Anaconda, Pyenv, Poetry, etc.). Always refer to the *requirements.txt* file for the list of required packages.
+If you prefer not to use the devcontainer, you can install the python environment as you like (Anaconda, Pipenv, Pyenv, Poetry, etc.). Always refer to the *requirements.txt* file for the list of required packages.
 
  ### Run the EO pipeline
  Follow this steps to run the EO data download and preprocessing pipeline:
