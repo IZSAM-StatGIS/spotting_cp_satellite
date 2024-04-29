@@ -27,7 +27,7 @@ After starting Docker on your machine, clone this repository on your computer an
 If you prefer not to use the devcontainer, you can install the python environment as you like (Anaconda, Pipenv, Pyenv, Poetry, etc.). Always refer to the *requirements.txt* file for the list of required packages.
 
  ### Run the EO pipeline
- Follow this steps to run the EO data download and preprocessing pipeline:
+ Follow these steps to run the EO data download and preprocessing pipeline:
 ```
 # move to the scripts folder
 cd src/EO/script
